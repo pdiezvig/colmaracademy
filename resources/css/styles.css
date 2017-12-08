@@ -1,0 +1,669 @@
+/* Styles for Colmar Academy
+
+--- Fonts selected ---
+Maven Pro: base text, sans-serif
+PT Sans Caption: h1 .. hx, sans-serif
+
+--- Color Palette (with Adobe Color CC)---
+#9E980A green
+#E8E2BB
+#A8920B yellow
+#917210 middle
+#A8720B orange
+#9E5B0A brown (buttons)
+*/
+
+@font-face {
+  font-family: 'Maven Pro';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Maven Pro Regular'), local('MavenPro-Regular'), url(https://fonts.gstatic.com/s/mavenpro/v11/MG9KbUZFchDs94Tbv9U-pZBw1xU1rKptJj_0jans920.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}
+@font-face {
+  font-family: 'Maven Pro';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Maven Pro Bold'), local('MavenPro-Bold'), url(https://fonts.gstatic.com/s/mavenpro/v11/uDssvmXgp7Nj3i336k_dShampu5_7CjHW5spxoeN3Vs.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}
+@font-face {
+  font-family: 'PT Sans Caption';
+  font-style: normal;
+  font-weight: 400;
+  src: local('PT Sans Caption'), local('PTSans-Caption'), url(https://fonts.gstatic.com/s/ptsanscaption/v10/OXYTDOzBcXU8MTNBvBHeSXN9R_EX6M95WNFWnfFOpFM.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}
+@font-face {
+  font-family: 'PT Sans Caption';
+  font-style: normal;
+  font-weight: 700;
+  src: local('PT Sans Caption Bold'), local('PTSans-CaptionBold'), url(https://fonts.gstatic.com/s/ptsanscaption/v10/Q-gJrFokeE7JydPpxASt20dFtDTX1z7gIQlsqADkuzY.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}
+
+/* ---------- COMMON STYLES ---------- */
+
+html {
+  font-family: "Maven Pro", sans-serif;
+  font-size: 14px;
+  color: dimgrey;
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.2;
+}
+
+a {
+  text-decoration: none;
+  color: #9E5B0A;
+}
+
+/* This class applies in every div container and set the same width for all */
+.container {
+  max-width: 980px;
+  margin: auto;
+}
+
+.white {
+  color: white;
+}
+
+.dimGrey {
+  color: dimGrey;
+}
+
+.leftColumn {
+  width: 60%;
+}
+
+.rightColumn {
+  width: 40%;
+}
+
+h1 {
+  font-family: "PT Sans Caption", sans-serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+h2 {
+  font-family: "PT Sans Caption", sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+h3 {
+  font-family: "PT Sans Caption", sans-serif;
+  font-size: 1.4rem;
+  font-weight: normal;
+  line-height: 1.4;
+}
+
+
+
+/* ---------- HEADER ---------- */
+/* Styles and media queries for header elements */
+
+header {
+  background-color: white;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: space-between;
+}
+
+header nav ul li {
+  display: inline;
+  padding: 0px 8px;
+}
+
+.logoItems {
+  padding-left: 24px;
+  display: inline-flex;
+  align-items: center;
+  align-content: center;
+  justify-content: flex-start;
+}
+
+.imgLogo {
+  display: block;
+  height: 32px;
+  padding-right: 8px;
+}
+
+.textLogoBold {
+  font-weight: bold;
+}
+
+.navItems {
+  padding-right: 24px;
+}
+
+.navItems .mobile {
+  display: none;
+}
+
+/* ---------- HEADER tablet ---------- */
+
+@media only screen and (max-width: 768px) {
+
+
+  /* Hide terms and privacy */
+  .navItems .desktop {
+    display: none;
+  }
+
+  .navItems .mobile {
+    display: inline-block;
+  }
+
+}
+
+/* ---------- HEADER mobile ---------- */
+
+@media only screen and (max-width: 480px) {
+
+
+  /* Hide terms and privacy */
+  .navItems .desktop, .textLogoBold, .textLogo {
+    display: none;
+  }
+
+  .navItems .mobile {
+    display: inline-block;
+  }
+
+}
+
+
+
+
+/* ---------- BANNER ---------- */
+/* Styles and media queries for Banner section */
+
+.bannerContainer {
+  background-color: #A8920B;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: center;
+}
+
+.imgBanner {
+  margin: 32px 24px;
+}
+
+.imgBanner img {
+  max-width: 100%;
+}
+
+.claimBanner {
+  margin: 0 48px 0 0;
+}
+
+.claimBanner h1 {
+  margin: 16px 0 32px 0;
+}
+
+.claimBanner h3 {
+  margin-bottom: 0 0 24px 0;
+}
+
+.button {
+  background-color: #9E5B0A;
+  color: white;
+  font-size: 1.5rem;
+  text-align: center;
+  padding: 8px 0;
+  margin: 24px 0;
+  border-radius: 5px;
+  box-shadow: 3px 3px 1px #555555;
+}
+
+/* ---------- BANNER tablet ---------- */
+
+@media only screen and (max-width: 768px) {
+
+  .bannerContainer {
+    flex-direction: column;
+  }
+
+  .leftColumn, .rightColumn {
+    width: 100%;
+  }
+
+  .claimBanner {
+    margin: 0 24px 32px 24px;
+  }
+
+  .claimBanner h1 {
+    margin: 0 0 16px 0;
+  }
+
+  .claimBanner h3 {
+    margin-bottom: 0 0 24px 0;
+  }
+
+  .button {
+    width: 50%;
+    margin: 24px auto;
+  }
+
+}
+
+/* ---------- BANNER mobile ---------- */
+
+@media only screen and (max-width: 480px) {
+
+  .bannerContainer {
+    flex-direction: column;
+  }
+
+  .leftColumn, .rightColumn {
+    width: 100%;
+  }
+
+  .imgBanner {
+    margin: 0px;
+  }
+
+  .claimBanner {
+    margin: 32px 24px;
+  }
+
+  .claimBanner h1 {
+    margin: 0 0 32px 0;
+  }
+
+  .claimBanner h3 {
+    margin-bottom: 0 0 24px 0;
+  }
+  .button {
+    width: 75%;
+    margin: 24px auto;
+  }
+
+}
+
+
+/* ---------- SECTION 1 ---------- */
+/* Styles and media queries for Section 1 */
+
+.section1Container {
+  background-color: white;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-content: flex-start;
+}
+
+.s1LeftContent {
+  border-right: 1px solid lightgrey;
+  padding: 32px 24px;
+}
+
+.s1LeftContent img {
+  width: 100%;
+}
+
+.s1LeftContent h2 {
+  margin: 32px 0 24px 0;
+}
+
+.s1LeftContent cite {
+  display: block;
+  font-style: italic;
+  font-size: 0.75rem;
+  padding-top: 24px;
+}
+
+.s1RightContent {
+  padding: 16px 0;
+  display: flex;
+  flex-direction: column;
+  align-content: flex-start;
+}
+
+.s1RightContent .cell:last-child {
+  background-color: #E8E2BB;
+}
+
+
+/* --- Cell styles, valid por Section 1 and Section 3 */
+
+.cell {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: center;
+}
+
+.cellImgContainer {
+  width: 35%;
+}
+
+.cellImg {
+  padding: 16px;
+}
+
+.cellImg img {
+  width: 100%;
+}
+
+.cellImg .mobile {
+  display: none;
+}
+
+.cellInfoContainer {
+  width: 65%;
+}
+
+.cellInfo p {
+  padding: 8px 0;
+}
+
+/* Border only applies to Section1 */
+
+.section1Container .cell {
+  border-bottom: 1px solid lightgrey;
+}
+
+/* ---------- SECTION 1 mobile ---------- */
+
+@media only screen and (max-width: 480px) {
+
+  .section1Container {
+    flex-direction: column;
+  }
+
+  .section1Container .leftColumn {
+    display: none;
+  }
+
+  .section1Container .rightColumn {
+    width: 100%;
+  }
+
+  .s1RightContent {
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    align-content: flex-start;
+  }
+
+  .s1RightContent .cell:last-child {
+    background-color: white;
+  }
+
+  .cell {
+    border-bottom: 0px;
+    flex-direction: column;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: center;
+  }
+
+  .section1Container .cell {
+    border-bottom: 0px;
+  }
+
+  .cellImgContainer {
+    width: 100%;
+  }
+
+  .cellImg {
+    padding: 0px;
+  }
+
+  .cellImg .desktop {
+    display: none;
+  }
+  .cellImg .mobile {
+    display: block;
+  }
+
+  .cellInfoContainer {
+    width: 100%;
+  }
+
+  .cellInfo {
+    padding: 16px 16px 48px 16px;
+  }
+
+  .cellInfo p {
+    padding: 8px 0;
+  }
+
+}
+
+
+
+
+/* ---------- SECTION 2 ---------- */
+/* Styles and media queries for Section 2 */
+
+.section2Title {
+  background-color: #E8E2BB;
+  width: 100%;
+  margin: auto;
+  text-align: center;
+  padding: 32px 0 0 0;
+}
+
+.section2Container {
+  background-color: #E8E2BB;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  align-content: flex-start;
+  flex-wrap: wrap;
+  padding: 16px 56px 16px 56px;
+}
+
+.card {
+  width: 250px;
+  background-color: white;
+  height: 300px;
+  margin: 16px 16px;
+}
+
+.cardImg {
+  padding: 0;
+}
+
+.cardImg img {
+  width: 100%;
+}
+
+.cardInfoContainer {
+  padding: 0 16px;
+}
+
+.cardInfo h3 {
+  padding-top: 16px;
+}
+
+.cardInfo p {
+  padding-top: 8px;
+}
+
+.section2ContainerMobile {
+  display: none;
+  background-color: #E8E2BB;
+  padding: 0 16px 24px 16px;
+}
+
+.section2ContainerMobile h3 {
+  background-color: white;
+  padding: 16px;
+  margin-bottom: 8px;
+}
+
+/* ---------- SECTION 2 tablet ---------- */
+
+@media only screen and (max-width: 768px) {
+
+  .section2Container {
+    padding: 16px;
+  }
+
+}
+
+/* ---------- SECTION 2 mobile ---------- */
+
+@media only screen and (max-width: 480px) {
+
+  .section2Title {
+    padding: 32px 0 16px 0;
+  }
+
+  .section2Container {
+    display: none;
+  }
+
+  .section2ContainerMobile {
+    display: block;
+  }
+
+  .section2ContainerMobile h3 {
+    display: block;
+  }
+
+}
+
+
+
+
+
+/* ---------- SECTION 3 ---------- */
+/* Styles and media queries for Section 3 */
+
+.section3Title {
+  width: 100%;
+  margin: auto;
+  text-align: center;
+  padding: 32px 0;
+}
+
+.section3Container {
+  background-color: white;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-content: flex-start;
+}
+
+.s3LeftContent {
+  padding: 0 24px;
+}
+
+.s3LeftContent video {
+  width: 100%;
+}
+
+.s3LeftContent h3 {
+  margin: 24px 0 8px 0;
+}
+
+.s3LeftContent p {
+  margin-bottom: 32px;
+}
+
+.s3RightContent {
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-content: flex-start;
+}
+
+.s3RightContent .cell:first-child {
+  background-color: #E8E2BB;
+}
+
+
+/* ---------- SECTION 3 mobile ---------- */
+
+@media only screen and (max-width: 480px) {
+
+  .section3Title {
+    padding: 32px 0 16px 0;
+  }
+
+  .section3Container {
+    flex-direction: column;
+  }
+
+  .section3Container .rightColumn {
+    display: none;
+  }
+
+  .section3Container .leftColumn {
+    width: 100%;
+  }
+
+  .s3LeftContent {
+    padding: 0 0 24px 0;
+  }
+
+  .s3LeftContent h3 {
+    display: none;
+  }
+
+  .s3LeftContent p {
+    display: none;
+  }
+
+
+
+}
+
+
+
+
+/* ---------- FOOTER ---------- */
+/* Styles and media queries for footer elements */
+
+footer {
+  background-color: #917210;
+  color: white;
+  font-size: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-content: flex-start;
+}
+
+.copyright {
+  padding: 16px 0 64px 24px;
+}
+
+.terms {
+  padding: 16px 24px 64px 0;
+}
+
+.terms li {
+  display: inline;
+  padding-left: 10px;
+}
+
+/* ---------- FOOTER mobile ---------- */
+
+@media only screen and (max-width: 480px) {
+
+
+  /* Hide terms and privacy */
+  .terms {
+    display: none;
+  }
+
+  .copyright {
+    padding: 16px;
+  }
+
+}
